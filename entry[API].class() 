@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/glenn/Development/code/phase-3/apex/phase-3-sinatra-react-project/db/seeds.rb:9 :
+
+     [1;34m4[0m: [1;34m# Seed your database here[0m
+     [1;34m5[0m: [1;34;4mDeveloper[0m.create([35mdeveloper_name[0m: [31m[1;31m'[0m[31mGlenn[1;31m'[0m[31m[0m)
+     [1;34m6[0m: response = [1;34;4mRestClient[0m.get [31m[1;31m'[0m[31mhttps://api.publicapis.org/entries[1;31m'[0m[31m[0m
+     [1;34m7[0m: entries = [1;34;4mJSON[0m.parse(response)
+     [1;34m8[0m: entries.each [32mdo[0m |entry|
+ =>  [1;34m9[0m:     binding.pry
+    [1;34m10[0m:    new_entry = [1;34;4mEntry[0m.create(
+    [1;34m11[0m:         [35mAPI[0m: entry[[31m[1;31m'[0m[31mAPI[1;31m'[0m[31m[0m],
+    [1;34m12[0m:         [35mDescription[0m: entry[[31m[1;31m'[0m[31mDescription[1;31m'[0m[31m[0m],
+    [1;34m13[0m:         [35mLink[0m: entry[[31m[1;31m'[0m[31mLink[1;31m'[0m[31m[0m],
+    [1;34m14[0m:         [35mCategory[0m: entry[[31m[1;31m'[0m[31mCategory[1;31m'[0m[31m[0m],
+
