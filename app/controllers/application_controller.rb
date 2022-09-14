@@ -36,6 +36,7 @@ class ApplicationController < Sinatra::Base
     developer.to_json
   
   end
+
   
   get "/entries" do
     include_developer(Entry.all)
@@ -52,6 +53,7 @@ class ApplicationController < Sinatra::Base
     entries.destroy
     entries.to_json
   end
+
 
 end
 
